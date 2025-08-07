@@ -16,6 +16,20 @@
     }
     return {"main":BI,"trunc":num / BI};
 }
+            	function mod_pow(b,p,m) {
+	    var c = 1n;
+	    var l = baseconv(p,2n).reverse();
+	    for(let i = 0n; i < l.length; i++) {
+	        if(l[i] == 1n) {
+	            c *= b;
+	        }
+	        c %= m;
+	        if(l[i + 1n] != undefined) {
+	            c **= 2n;
+	        }
+	    }
+	    return c;
+	}
 function period(B) {
     var k = 1n;
     var long = 10n;
