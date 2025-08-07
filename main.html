@@ -92,11 +92,11 @@ setInterval(function(){
         n += 2n;
     }
     if(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
-        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + n + "<sub>" + period(n) + "</sub><br/></span>";
+        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + primes + ". " + n + "<sub>" + period(n) + "</sub><br/></span>";
     }
     if(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() > 1 && part()) {
         poly++;
-        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + "<b>" + n + "<sub>" + period(n) + "</sub></b> #" + poly + "<br/></span>";
+        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\"><b>" + primes + ". " + n + "<sub>" + period(n) + "</sub></b> #" + poly + "<br/></span>";
     }
     primes++;
 })
