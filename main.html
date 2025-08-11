@@ -85,7 +85,7 @@ document.body.style.fontSize = "14pt";
 document.body.style.fontFamily = "'Digital Counter 7'";
 var primes = 0n;
 var poly = 0n;
-var n = BigInt(document.getElementById("start").value);
+var n = BigInt(document.getElementById("start").innerText);
 var t = 3000000n * (10n ** 3000000n - 1n);
 var oldn = 0n;
 setInterval(function(){
