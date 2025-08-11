@@ -7,6 +7,8 @@
     <body>
 		<input id="start" value="1"/><button onclick="rizz(BigInt(document.getElementById('start').value));">start</button>
         <script>
+			var inf = [3n ** 5n, 7n ** 2n, 11n ** 2n, 13n ** 2n, 17n ** 2n, 19n, 23n, 29n, 31n ** 2n, 41n ** 2n, 43n, 47n, 53n, 59n, 67n, 71n, 79n, 83n, 89n, 103n, 107n, 109n, 113n, 127n, 131n, 139n, 149n, 157n, 163n, 167n, 173n, 179n, 181n, 199n, 223n, 229n, 233n, 239n, 257n, 277n, 281n, 283n, 293n, 307n, 311n, 313n, 337n, 347n, 359n, 373n, 409n, 433n, 439n, 491n, 547n, 571n, 593n, 613n, 617n, 653n, 673n, 739n, 883n, 991n, 1109n, 1231n, 1303n, 1361n, 1367n, 1381n, 1423n, 1621n, 1667n, 1901n, 1933n, 2089n, 2179n, 2333n, 2351n, 2791n, 2851n, 2963n, 3209n, 3221n, 5309n, 5449n, 6121n, 12109n, 13963n, 15329n, 19121n, 19267n, 19963n, 34543n, 35099n, 40993n, 93683n, 2n ** 7n, 2n ** 13n, 5n ** 7n, 5n ** 13n];
+// up to psi 100
             function reduc(num) {
     var BI = num;
     while(BI % 2n == 0n) {
@@ -73,8 +75,6 @@ function prime() {
 }
 function rizz(ohio) {
 	var dynamite = 3000000n * (10n ** 3000000n - 1n);
-var inf = [3n ** 5n, 7n ** 2n, 11n ** 2n, 13n ** 2n, 17n ** 2n, 19n, 23n, 29n, 31n ** 2n, 41n ** 2n, 43n, 47n, 53n, 59n, 67n, 71n, 79n, 83n, 89n, 103n, 107n, 109n, 113n, 127n, 131n, 139n, 149n, 157n, 163n, 167n, 173n, 179n, 181n, 199n, 223n, 229n, 233n, 239n, 257n, 277n, 281n, 283n, 293n, 307n, 311n, 313n, 337n, 347n, 359n, 373n, 409n, 433n, 439n, 491n, 547n, 571n, 593n, 613n, 617n, 653n, 673n, 739n, 883n, 991n, 1109n, 1231n, 1303n, 1361n, 1367n, 1381n, 1423n, 1621n, 1667n, 1901n, 1933n, 2089n, 2179n, 2333n, 2351n, 2791n, 2851n, 2963n, 3209n, 3221n, 5309n, 5449n, 6121n, 12109n, 13963n, 15329n, 19121n, 19267n, 19963n, 34543n, 35099n, 40993n, 93683n, 2n ** 7n, 2n ** 13n, 5n ** 7n, 5n ** 13n];
-// up to psi 100
 for(let t = 0n; t < inf.length; t++) {
     dynamite *= inf[t];
 }
