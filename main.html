@@ -92,6 +92,7 @@ setInterval(function(){
     while(mod_pow(2n, n - 1n, n) != 1n || n % 5n == 0n) {
         n += 2n;
     }
+	console.log(n);
     if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
 		primes++;
         document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + primes + ". " + n + "<sub>" + period(n) + "</sub><br/></span>";
