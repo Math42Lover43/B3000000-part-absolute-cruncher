@@ -92,16 +92,17 @@ setInterval(function(){
     while(mod_pow(2n, n - 1n, n) != 1n || n % 5n == 0n) {
         n += 2n;
     }
-	console.log(n);
-    if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
-		primes++;
-        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + primes + ". " + n + "<sub>" + period(n) + "</sub><br/></span>";
-    }
-    if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() > 1 && part()) {
-		primes++;
-        poly++;
-        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\"><b>" + primes + ". " + n + "<sub>" + period(n) + "</sub></b> #" + poly + "<br/></span>";
-    }
+	if(mod_pow(10n, t % (n - 1n), n) == 1n) {
+	    if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
+			primes++;
+	        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + primes + ". " + n + "<sub>" + period(n) + "</sub><br/></span>";
+	    }
+	    if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() > 1 && part()) {
+			primes++;
+	        poly++;
+	        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\"><b>" + primes + ". " + n + "<sub>" + period(n) + "</sub></b> #" + poly + "<br/></span>";
+	    }
+	}
 })
 setInterval(function(){
     document.getElementById("rate").innerHTML = `Rate: ${n - oldn}`;
