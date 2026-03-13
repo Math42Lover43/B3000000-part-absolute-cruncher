@@ -89,7 +89,7 @@ var t = 3000000n * (10n ** 3000000n - 1n);
 var oldn = 0n;
 setInterval(function(){
     n += 2n;
-    while(!prime() || !(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n)) {
+    while(!prime() || n % 5n == 0n) {
         n += 2n;
     }
     if(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
