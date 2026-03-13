@@ -77,7 +77,7 @@ function cond() {
     return ret;
 }
 function prime() {
-    return mod_pow(2n,n - 1n,n) == 1n && mod_pow(3n,n - 1n,n) == 1n && mod_pow(5n,n - 1n,n) == 1n && mod_pow(7n,n - 1n,n) == 1n && mod_pow(11n,n - 1n,n) == 1n && mod_pow(13n,n - 1n,n) == 1n && mod_pow(17n,n - 1n,n) == 1n && mod_pow(19n,n - 1n,n) == 1n && mod_pow(23n,n - 1n,n) == 1n && mod_pow(29n,n - 1n,n) == 1n && mod_pow(31n,n - 1n,n) == 1n && mod_pow(37n,n - 1n,n) == 1n && mod_pow(41n,n - 1n,n) == 1n && mod_pow(43n,n - 1n,n) == 1n && mod_pow(47n,n - 1n,n) == 1n && mod_pow(53n,n - 1n,n) == 1n && mod_pow(59n,n - 1n,n) == 1n && mod_pow(61n,n - 1n,n) == 1n && mod_pow(61n,n - 1n,n) == 1n;
+    return mod_pow(2n,n - 1n,n) == 1n && mod_pow(3n,n - 1n,n) == 1n && mod_pow(5n,n - 1n,n) == 1n && mod_pow(7n,n - 1n,n) == 1n && mod_pow(11n,n - 1n,n) == 1n && mod_pow(13n,n - 1n,n) == 1n && mod_pow(17n,n - 1n,n) == 1n && mod_pow(19n,n - 1n,n) == 1n && mod_pow(23n,n - 1n,n) == 1n && mod_pow(29n,n - 1n,n) == 1n && mod_pow(31n,n - 1n,n) == 1n && mod_pow(37n,n - 1n,n) == 1n && mod_pow(41n,n - 1n,n) == 1n && mod_pow(43n,n - 1n,n) == 1n && mod_pow(47n,n - 1n,n) == 1n && mod_pow(53n,n - 1n,n) == 1n && mod_pow(59n,n - 1n,n) == 1n && mod_pow(61n,n - 1n,n) == 1n && mod_pow(61n,n - 1n,n) == 1n && mod_pow(67n,n - 1n,n) == 1n;
 }
 document.body.innerHTML = `<div id="rate"></div><br/><div style="column-count: 8;" id="factors"></div>`;
 document.body.style.fontSize = "14pt";
@@ -89,7 +89,7 @@ var t = 3000000n * (10n ** 3000000n - 1n);
 var oldn = 0n;
 setInterval(function(){
     n += 2n;
-    while(!(mod_pow(2n,n - 1n,n) == 1n && mod_pow(3n,n - 1n,n) == 1n && mod_pow(5n,n - 1n,n) == 1n && mod_pow(7n,n - 1n,n) == 1n && mod_pow(11n,n - 1n,n) == 1n && mod_pow(13n,n - 1n,n) == 1n && mod_pow(17n,n - 1n,n) == 1n && mod_pow(19n,n - 1n,n) == 1n && mod_pow(23n,n - 1n,n) == 1n && mod_pow(29n,n - 1n,n) == 1n && mod_pow(31n,n - 1n,n) == 1n && mod_pow(37n,n - 1n,n) == 1n && mod_pow(41n,n - 1n,n) == 1n && mod_pow(43n,n - 1n,n) == 1n && mod_pow(47n,n - 1n,n) == 1n && mod_pow(53n,n - 1n,n) == 1n && mod_pow(59n,n - 1n,n) == 1n && mod_pow(61n,n - 1n,n) == 1n && mod_pow(67n,n - 1n,n) == 1n) || !(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() > 0 && part())) {
+    while(!prime() || !(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n)) {
         n += 2n;
     }
     if(n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
