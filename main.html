@@ -40,8 +40,8 @@
 	    return c;
 	}
 function period(B) {
-    var k = 1n;
-    var long = 10n;
+    var k = 0n;
+    var long = 1n;
     var BI = B;
 	var kicked = false;
     while(BI % 2n == 0n) {
@@ -56,7 +56,7 @@ function period(B) {
 		kicked = true;
 		console.log(BI, long, k);
     }
-    return k / speed;
+    return k;
 }
 setTimeout(5000);
 var dynamite = 3000000n * (10n ** 3000000n - 1n);
