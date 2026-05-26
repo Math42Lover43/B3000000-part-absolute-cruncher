@@ -85,12 +85,17 @@ document.body.style.fontFamily = "'Digital Counter 7'";
 var primes = 0n;
 var poly = 0n;
 var n = 1n;
+var speed = 1n;
 var t = 3000000n * (10n ** 3000000n - 1n);
 var oldn = 0n;
+function setspeed(x) {
+	speed = x;
+	n = 1n;
+}
 setInterval(function(){
-    n += 2n;
+    n += 2n ** speed;
     while(mod_pow(2n, n - 1n, n) != 1n || n % 5n == 0n) {
-        n += 2n;
+        n += 2n ** speed;
     }
 	if(mod_pow(10n, t % (n - 1n), n) == 1n) {
 	    if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
