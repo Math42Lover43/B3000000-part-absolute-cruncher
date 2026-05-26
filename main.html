@@ -99,6 +99,7 @@ setInterval(function(){
     n += 2n * speed;
     while(mod_pow(2n, n - 1n, n) != 1n || n % 5n == 0n) {
         n += 2n * speed;
+		console.log(n);
     }
 	
 	if(mod_pow(10n, t % (n - 1n), n) == 1n) {
