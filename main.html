@@ -54,7 +54,7 @@ function period(B) {
         k++;
         long = long * mod_pow(10n, speed, BI) % BI;
 		kicked = true;
-		console.log(BI, long, k);
+		
     }
     return k;
 }
@@ -100,7 +100,7 @@ setInterval(function(){
     while(mod_pow(2n, n - 1n, n) != 1n || n % 5n == 0n) {
         n += 2n * speed;
     }
-	console.log(n, mod_pow(2n, n - 1n, n) != 1n);
+	
 	if(mod_pow(10n, t % (n - 1n), n) == 1n) {
 	    if(prime() && n % 5n != 0n && t % period(n) == 0n && 3000000n % period(n) != 0n && cond() == 1 && part()) {
 			primes++;
