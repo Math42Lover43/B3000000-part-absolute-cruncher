@@ -50,7 +50,7 @@ function period(B) {
     while(BI % 5n == 0n) {
         BI /= 5n;
     }
-    while(!kicked) {
+    while(!(kicked && long == 1n)) {
         k++;
         long = long * mod_pow(10n, speed, BI) % BI;
 		kicked = true;
