@@ -43,17 +43,19 @@ function period(B) {
     var k = 1n;
     var long = 10n;
     var BI = B;
+	var kicked = false;
     while(BI % 2n == 0n) {
         BI /= 2n;
     }
     while(BI % 5n == 0n) {
         BI /= 5n;
     }
-    while(long != 1n) {
+    while(!kicked) {
         k++;
-        long = long * 10n % BI;
+        long = long * mod_pow(10n, speed, BI) % BI;
+		kicked = true;
     }
-    return k;
+    return k / speed;
 }
 setTimeout(5000);
 var dynamite = 3000000n * (10n ** 3000000n - 1n);
