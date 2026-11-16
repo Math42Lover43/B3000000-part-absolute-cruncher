@@ -96,17 +96,36 @@ function setspeed(x) {
 	speed = x;
 	n = 1n;
 }
+function gcd(a, b) {
+	var A = a;
+	var B = b;
+	var test;
+	if(a == b) {
+		return a;
+	}
+	while(true) {
+		test = [A % B, B % A];
+		if(test[0] == 0n) {
+			return test[1];
+		}
+		if(test[1] == 0n) {
+			return test[0];
+		}
+		B = test[0];
+		A = test[1];
+	}
+}
 setInterval(function(){
     n += 2n * speed;
     while(mod_pow(2n, n - 1n, n) != 1n || n % 5n == 0n) {
         n += 2n * speed;
     }
 	if(mod_pow(10n, t % (n - 1n), n) == 1n) {
-	    if(prime() && n % 5n != 0n && t % (speed * period(n)) == 0n && 3000000n % (speed * period(n)) != 0n && cond() == 1 && part()) {
+	    if(prime() && n % 5n != 0n && t % gcf(t, speed * period(n)) == 0n && 3000000n % (speed * period(n)) != 0n && cond() == 1 && part()) {
 			primes++;
 	        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\">" + primes + ". " + n + "<sub>" + period(n) + "</sub><br/></span>";
 	    }
-	    if(prime() && n % 5n != 0n && t % (speed * period(n)) == 0n && 3000000n % (speed * period(n)) != 0n && cond() > 1 && part()) {
+	    if(prime() && n % 5n != 0n && t % gcf(t, speed * period(n)) == 0n && 3000000n % (speed * period(n)) != 0n && cond() > 1 && part()) {
 			primes++;
 	        poly++;
 	        document.getElementById("factors").innerHTML += "<span id=\"prime" + primes + "\"><b>" + primes + ". " + n + "<sub>" + period(n) + "</sub></b> #" + poly + "<br/></span>";
